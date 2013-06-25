@@ -1,3 +1,5 @@
+require 'rspec'
+
 module RSpec
   module Coldep
     class StubBuilder
