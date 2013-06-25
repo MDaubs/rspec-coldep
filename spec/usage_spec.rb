@@ -11,6 +11,15 @@ describe 'usage' do
     expect(User.all).to eq('a couple fake users')
   end
 
+  it 'does not allow unstubbed methods to be called' do
+    dependency 'User' do
+      User.find('1234') == 'a single fake user'
+    end
+
+    expect { User.find('4321') }.to raise_exception
+    expect { User.not_stubbed }.to raise_exception
+  end
+
   it 'creates a test double' do
     user = collaborator do |user|
       user.first_name == 'Billy'

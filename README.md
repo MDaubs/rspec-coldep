@@ -29,10 +29,15 @@ RSpec-ColDep syntax documents dependencies of the object under test and creates 
       User.all == 'a couple fake users'
     end
 
-is effectively the same as this (except `User` need not be defined in advance):
+is similar to this:
 
     User.stub(:find).with('1234').and_return('a single fake user')
     User.stub(:all).and_return('a couple fake users')
+
+except the ColDep version encourages test isolation by:
+
+  * not requiring `User` to be previously defined.
+  * not allowing unstubbed methods to be called on the dependency.
 
 ## Documenting collaborators builds test doubles
 
