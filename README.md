@@ -29,7 +29,7 @@ RSpec-ColDep syntax documents dependencies of the object under test and creates 
       User.all == 'a couple fake users'
     end
 
-is effectively the same as:
+is effectively the same as this (except `User` need not be defined in advance):
 
     User.stub(:find).with('1234').and_return('a single fake user')
     User.stub(:all).and_return('a couple fake users')
