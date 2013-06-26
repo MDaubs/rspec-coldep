@@ -1,4 +1,4 @@
-# RSpec-ColDep
+# RSpec-ColDep [![Build Status](https://secure.travis-ci.org/MDaubs/rspec-coldep.png?branch=master)](http://travis-ci.org/MDaubs/rspec-coldep)
 
 Col(laborators) & Dep(endencies)
 
