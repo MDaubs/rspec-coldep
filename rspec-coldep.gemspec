@@ -4,7 +4,7 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 
 Gem::Specification.new do |spec|
   spec.name          = "rspec-coldep"
-  spec.version       = "0.1.1"
+  spec.version       = "0.1.2"
   spec.authors       = ["Matt Daubert"]
   spec.email         = ["mdaubert@gmail.com"]
   spec.description   = %q{RSpec mocking syntax using collaborators and dependencies}
